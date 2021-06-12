@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+        <ion-buttons slot="start" >
+          <ion-button (click)="back()">
+           <ion-icon  name="arrow-undo-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>{{myname}}</ion-title>
+   </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+   <ion-slides  #slider pager="true" [options]="slideOpts" (ionSlideDidChange)='ionSlideDidChange()'>
+      <ion-slide >
+        <img src="{{this.image01}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{this.image02}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{this.image03}}">
+      </ion-slide>
+    </ion-slides>
+
+
+
+
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ชื่อโรงเรียน : {{myname}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ที่อยู่ : {{address}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>รหัสโรงเรียน : {{schoolcode}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ผู้อำนวยการ : {{director}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ผู้จัดการ : {{manager}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ชื่อผู้รับใบอนุญาต : {{licensees}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>จำนวนครูทั้งหมด : {{teachers}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>จำนวนนักเรียนทั้งหมด : {{student}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ประเภทสามัญศึกษา : {{ordinary}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>เตรียมอนุบาล: {{kinder}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>นักเรียนก่อนประถมศึกษา ชาย หญิง : {{prerimary}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>นักเรียนประถมศึกษา ชาย หญิง : {{elementary}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>นักเรียนมัธยมศึกษาตอนต้น ชาย หญิง : {{junor}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>นักเรียนมัธยมศึกษาตอนปลาย ชาย หญิง : {{highSchool}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>เบอร์โทรศัพท์ติดต่อ : {{number}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ละติจูด : {{latitude}}</ion-label><br/>
+    <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ลองจิจูด : {{longitude}}</ion-label><br/>
+
+
+  <!-- <ion-label>{{myhigh}}</ion-label> -->
+
+</ion-content>
+

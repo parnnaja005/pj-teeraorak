@@ -1,0 +1,60 @@
+  <ion-header class="ion-no-border">
+  <ion-item lines="none" color="primary">
+    <ion-avatar slot="start">
+      <img src="assets/No.1.png"[translucent]="true">
+    </ion-avatar>
+    <ion-label>
+      <h2>สำนักงานศึกษาธิการจังหวัดอุบลราชธานี</h2>
+    </ion-label>
+  </ion-item>
+</ion-header>
+<br>
+
+
+<!-- <ion-toolbar>
+  <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
+</ion-toolbar> -->
+
+
+<ion-content [fullscreen]="true">
+  <ion-toolbar>
+        <ion-searchbar debounce="500" (ionChange)="_ionCange($event)"></ion-searchbar>
+  </ion-toolbar>
+
+
+  <!-- <div class="search">
+    <ion-input  placeholder="Search something..." ></ion-input>
+    <i class="fa fa-search"><ion-icon name="search"></ion-icon></i>
+  </div> -->
+
+  <ion-list>
+    <ion-item *ngFor="let item of tmpcountrylist ">
+      <ion-avatar slot="start">
+        <img [src]="item.myimg" />
+      </ion-avatar>
+      <ion-label>{{item.myname}}</ion-label>
+      <ion-button color="primary" slot="end" (click)="schoolp1(item)"> View</ion-button>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
+
+
+<ion-tab-bar>
+  <ion-tab-button tab="map" routerLink="/home">
+    <ion-icon name="map"></ion-icon>
+    <ion-label>Map</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="add">
+    <ion-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+  </ion-tab-button>
+
+  <ion-tab-button tab="school" routerLink="/add-school">
+    <ion-icon name="school"></ion-icon>
+    <ion-label>School</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>

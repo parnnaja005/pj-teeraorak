@@ -1,0 +1,63 @@
+<!-- <ion-header []="true">
+  <ion-toolbar color="">
+    <ion-title>
+      สำนักงานศึกษาธิการจังหวัดอุบลราชธานี
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header class="ion-no-border">
+  <ion-item lines="none" color="primary">
+    <ion-avatar slot="start">
+      <img src="assets/No.1.png">
+    </ion-avatar>
+    <ion-label>
+      <h2>สำนักงานศึกษาธิการจังหวัดอุบลราชธานี</h2>
+    </ion-label>
+  </ion-item>
+</ion-header>
+<!-- <br> -->
+
+<ion-content [fullscreen]="true">
+
+  <ion-button color="medium">
+    <ion-icon name="location"></ion-icon>
+    <ion-button expand="block" color="medium" href= "https://www.google.com/maps/d/u/0/viewer?mid=1lQVpv7Nbu4LHUQ4g-3I9CpBMFubogXzR&ll=15.16525773848884%2C105.36560124414065&z=9"> ที่ตั้งโรงเรียนเอกชนพื้นที่จังหวัดอุบลราชธานี</ion-button>
+  </ion-button>
+
+  <!-- <center><ion-button size="small" color="dark">ที่ตั้งโรงเรียนเอกชนพื้นที่จังหวัดอุบลราชธานี</ion-button></center> -->
+
+  <div #map id="map"></div>
+
+
+  <center>
+    <ion-button href="https://www.facebook.com/ubnpeo/">
+      <ion-icon name="logo-facebook"></ion-icon>
+      <ion-button color="primary">Facebook</ion-button>
+      <!-- <ion-button expand="block">ที่ตั้งโรงเรียนเอกชนพื้นที่จังหวัดอุบลราชธานี</ion-button> -->
+    </ion-button>
+    <ion-button href="http://www.ubnpeo.moe.go.th/ubnpeo/?fbclid=IwAR1alWaxqBvaXj7K2ZbD_vG_4RHiKFCqr1Gvji9OAvEwahXwIVQy8cXcS50">
+      <ion-icon name="globe-outline"></ion-icon>
+      <ion-button color="primary">website</ion-button>
+      <!-- <ion-button expand="block">ที่ตั้งโรงเรียนเอกชนพื้นที่จังหวัดอุบลราชธานี</ion-button> -->
+    </ion-button>
+  </center>
+</ion-content>
+
+<ion-tab-bar>
+  <ion-tab-button tab="map" routerLink="/home">
+    <ion-icon name="map"></ion-icon>
+    <ion-label>Map</ion-label>
+  </ion-tab-button>
+
+  <ion-tab-button tab="add">
+    <ion-button>
+      <ion-icon name="location-outline"></ion-icon>
+    </ion-button>
+  </ion-tab-button>
+
+  <ion-tab-button tab="school" routerLink="/add-school">
+    <ion-icon name="school"></ion-icon>
+    <ion-label>School</ion-label>
+  </ion-tab-button>
+</ion-tab-bar>
